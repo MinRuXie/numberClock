@@ -1,0 +1,34 @@
+* {
+  font-family: Tahoma, sans-serif;
+}
+
+.dashboard-wrap {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard-wrap .clock-wrap .hour-wrap {
+  font-size: 68px;
+}
+.dashboard-wrap .clock-wrap .text-1 {
+  font-size: 60px;
+}
+.dashboard-wrap .clock-wrap .minutes-wrap {
+  font-size: 68px;
+}
+.dashboard-wrap .clock-wrap .text-2 {
+  font-size: 24px;
+}
+.dashboard-wrap .clock-wrap .seconds-wrap {
+  font-size: 24px;
+}
+.dashboard-wrap .date-wrap {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,41 @@
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+.dashboard-wrap {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .clock-wrap {
+        
+        .hour-wrap {
+            font-size: 68px;
+        }
+
+        .text-1 {
+            font-size: 60px;
+        }
+
+        .minutes-wrap {
+            font-size: 68px;
+        }
+
+        .text-2 {
+            font-size: 24px;
+        }
+
+        .seconds-wrap {
+            font-size: 24px;
+        }
+    }
+
+    .date-wrap {
+        font-size: 16px;
+    }
+}
