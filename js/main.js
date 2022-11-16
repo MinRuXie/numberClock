@@ -11,7 +11,7 @@ function formatNumber(number) {
 function getNowTime() {
     let now = new Date();
     let year = now.getFullYear();
-    let month = now.getMonth();
+    let month = now.getMonth() + 1;
     let date = now.getDate();
     let week_index = now.getDay();
     let hour = now.getHours();
