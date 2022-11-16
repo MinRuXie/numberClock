@@ -5,7 +5,7 @@
 .dashboard-wrap {
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 20px 20px 40px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -15,27 +15,28 @@
     .clock-wrap {
         
         .hour-wrap {
-            font-size: 68px;
+            font-size: 72px;
         }
 
         .text-1 {
-            font-size: 60px;
+            font-size: 62px;
         }
 
         .minutes-wrap {
-            font-size: 68px;
+            font-size: 72px;
         }
 
         .text-2 {
-            font-size: 24px;
+            font-size: 26px;
         }
 
         .seconds-wrap {
-            font-size: 24px;
+            font-size: 26px;
         }
     }
 
     .date-wrap {
-        font-size: 16px;
+        font-size: 20px;
+        line-height: 0.8;
     }
 }
