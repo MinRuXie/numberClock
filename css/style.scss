@@ -11,6 +11,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     .clock-wrap {
         
@@ -38,5 +39,53 @@
     .date-wrap {
         font-size: 20px;
         line-height: 0.8;
+    }
+
+    .coin-wrap {
+        position: absolute;
+        top: 70px;
+        right: 30px;
+    }
+}
+
+
+
+.coin-wrap {
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: gold;
+    border: 2px solid goldenrod; /* 1 */
+    outline: 3px solid gold; /* 2 */
+    box-shadow: 0 0 0 5px darkgoldenrod; /* 3 */
+    color: darkgoldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.animate-up-out {
+    animation-name: up-out;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-out {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(-50px) scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-50px) scale(0);
+        opacity: 0;
     }
 }
