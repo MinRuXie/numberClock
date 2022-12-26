@@ -6,8 +6,6 @@ function formatNumber(number) {
     return number < 10 ? `0${number}` : number;
 }
 
-
-
 function getNowTime() {
     let now = new Date();
     let year = now.getFullYear();
@@ -29,18 +27,8 @@ function getNowTime() {
     $minutes_wrap.text(formatNumber(minutes));
     $seconds_wrap.text(formatNumber(seconds));
     $date_wrap.text(`週${weeks[week_index]}, ${year}年${formatNumber(month)}月${formatNumber(date)}日`);
-
-
 }
 
+
+/* init */
 setInterval(getNowTime);
-
-
-
-$(function() {
-    
-
-});
-
-
-

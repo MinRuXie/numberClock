@@ -2,11 +2,22 @@
   font-family: Tahoma, sans-serif;
 }
 
-.dashboard-wrap {
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard-wrap {
   color: white;
-  padding: 20px 20px 40px;
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,52 +42,6 @@
 .dashboard-wrap .date-wrap {
   font-size: 20px;
   line-height: 0.8;
-}
-.dashboard-wrap .coin-wrap {
-  position: absolute;
-  top: 70px;
-  left: 30px;
-}
-
-.coin-wrap {
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  background-color: gold;
-  border: 2px solid goldenrod;
-  /* 1 */
-  outline: 3px solid gold;
-  /* 2 */
-  box-shadow: 0 0 0 5px darkgoldenrod;
-  /* 3 */
-  color: darkgoldenrod;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  font-weight: bold;
-  box-sizing: border-box;
-}
-
-.animate-up-out {
-  animation-name: up-out;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes up-out {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-50px) scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-50px) scale(0);
-    opacity: 0;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
