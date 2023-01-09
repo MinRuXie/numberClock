@@ -14,7 +14,7 @@ $(function() {
     let leaf_patterns = ['pattern-ginkgo', 'pattern-maple'];
 
     let snow_count = Math.floor(viewport_width / 10);
-    let leaf_count = Math.floor(viewport_width / 30);
+    let leaf_count = Math.floor(viewport_width / 20);
 
 
     /* get random number */
@@ -36,7 +36,7 @@ $(function() {
     /* get ginkgo element HTML */
     function getGinkgoHTML() {
         return `<div class="animate-falling leaf pattern-ginkgo ${falling_item_sizes[getRandomNumber(0, 3)]}" 
-            style="--top: ${getRandomNumber(30, viewport_height)}; 
+            style="--top: ${getRandomNumber(100, viewport_height)}; 
                    --left:${getRandomNumber(0, 100)}; 
                    --down-speed: ${getRandomNumber(20, 65)}s; 
                    --path: ${getRandomNumber(20, Math.floor(viewport_width / 25))}; 
@@ -47,7 +47,7 @@ $(function() {
     /* get maple element HTML */
     function getMapleHTML() {
         return `<div class="animate-falling leaf pattern-maple ${falling_item_sizes[getRandomNumber(0, 3)]}" 
-            style="--top: ${getRandomNumber(30, viewport_height)}; 
+            style="--top: ${getRandomNumber(100, viewport_height)}; 
                    --left:${getRandomNumber(0, 100)}; 
                    --down-speed: ${getRandomNumber(20, 65)}s; 
                    --path: ${getRandomNumber(20, Math.floor(viewport_width / 25))}; 
@@ -58,7 +58,7 @@ $(function() {
     /* get leafs element HTML */
     function getLeafsHTML() {
         return `<div class="animate-falling leaf ${leaf_patterns[getRandomNumber(0, 1)]} ${falling_item_sizes[getRandomNumber(0, 3)]}" 
-            style="--top: ${getRandomNumber(30, viewport_height)}; 
+            style="--top: ${getRandomNumber(100, viewport_height)}; 
                    --left:${getRandomNumber(0, 100)}; 
                    --down-speed: ${getRandomNumber(20, 65)}s; 
                    --path: ${getRandomNumber(20, Math.floor(viewport_width / 25))}; 
