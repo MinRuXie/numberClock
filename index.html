@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雪中時鐘</title>
+    <title>飄落物時鐘</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/snow.css">
+    <link rel="stylesheet" href="css/falling.css">
 </head>
 <body>
 
-    <section id="js-snow-wrap">
+    <section id="js-falling-wrap">
         <div class="js-dashboard dashboard-wrap">
             <div class="clock-wrap">
                 <span class="hour-wrap"></span><span class="text-1">:</span><span class="minutes-wrap"></span><span class="text-2">.</span><span class="seconds-wrap"></span>
@@ -19,9 +19,17 @@
         </div>
     </section>
 
+    <div id="js-falling-btn-wrap" class="falling-btn-wrap">
+        <div class="falling-btn falling-snow active">Snow</div>
+        <div class="falling-btn falling-ginkgo">Ginkgo</div>
+        <div class="falling-btn falling-maple">Maple</div>
+        <div class="falling-btn falling-leafs">Leafs</div>
+        <div class="falling-btn falling-sakura">Sakura</div>
+    </div>
+
     
     <script src="js/plugins/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/snow.js"></script>
+    <script src="js/falling.js"></script>
 </body>
 </html>
