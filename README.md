@@ -14,7 +14,7 @@
 * 雪：`snow`
 * 銀杏：`ginkgo`
 * 楓葉：`maple`
-* 混合葉子：`leafs`（`ginkgo` + `maple`）
+* 混合葉子：`leafs`（TPN 3種葉子混合）
 * 櫻：`sakura`
 
 
