@@ -11,7 +11,7 @@ $(function() {
 
     let $falling_wrap = $('#js-falling-wrap');
     let falling_item_sizes = ['size-smaller', 'size-small', 'size-middle', 'size-large'];
-    let leaf_patterns = ['pattern-ginkgo', 'pattern-maple'];
+    let leaf_patterns = ['pattern-tpn-leaf-1', 'pattern-tpn-leaf-2', 'pattern-tpn-leaf-3'];
 
     let snow_count = Math.floor(viewport_width / 10);
     let leaf_count = Math.floor(viewport_width / 20);
@@ -57,7 +57,7 @@ $(function() {
 
     /* get leafs element HTML */
     function getLeafsHTML() {
-        return `<div class="animate-falling leaf ${leaf_patterns[getRandomNumber(0, 1)]} ${falling_item_sizes[getRandomNumber(0, 3)]}" 
+        return `<div class="animate-falling leaf ${leaf_patterns[getRandomNumber(0, 2)]} ${falling_item_sizes[getRandomNumber(0, 3)]}" 
             style="--top: ${getRandomNumber(100, viewport_height)}; 
                    --left:${getRandomNumber(0, 100)}; 
                    --down-speed: ${getRandomNumber(20, 65)}s; 
@@ -125,6 +125,9 @@ $(function() {
 
         // build falling item
         buildFalling('snow', snow_count);
+
+        // background image
+        $falling_wrap.removeClass('tpn-theme');
     });
 
     /* click - ginkgo */
@@ -140,6 +143,9 @@ $(function() {
 
         // build falling item
         buildFalling('ginkgo', leaf_count);
+
+        // background image
+        $falling_wrap.removeClass('tpn-theme');
     });
 
     /* click - maple */
@@ -155,6 +161,9 @@ $(function() {
 
         // build falling item
         buildFalling('maple', leaf_count);
+
+        // background image
+        $falling_wrap.removeClass('tpn-theme');
     });
 
     /* click - leafs */
@@ -170,6 +179,9 @@ $(function() {
 
         // build falling item
         buildFalling('leafs', leaf_count);
+
+        // background image
+        $falling_wrap.addClass('tpn-theme');
     });
 
     /* click - sakura */
@@ -185,10 +197,13 @@ $(function() {
 
         // build falling item
         buildFalling('sakura', snow_count);
+
+        // background image
+        $falling_wrap.removeClass('tpn-theme');
     });
 
 
 
     /* init */
-    $falling_btn_snow.click(); // default
+    $falling_btn_leafs.click(); // default
 });
