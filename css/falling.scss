@@ -1,4 +1,6 @@
-/* falling btn */
+//---------------------
+// falling btn
+//---------------------
 .falling-btn-wrap {
     position: fixed;
     bottom: 10px;
@@ -23,19 +25,39 @@
     }
 }
 
-/* falling wrap */
+//--------------------
+// falling wrap
+//--------------------
 .falling-wrap {
+
+    //---------------
+    // Theme
+    //---------------
+
+    /* Theme - default */
     background-color: black;
 
-    &.tpn-theme {
+    /* Theme - leafs */
+    &[data-theme="leafs"] {
         background-image: url('../images/bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
 
-    /* kind - leaf */
+    //---------------
+    // Falling item
+    //---------------
+
+    /* item - leaf */
     .leaf {
 
+        /* size */
+        &.size-smaller { width: 12px; height: 12px; }
+        &.size-small { width: 16px; height: 16px; }
+        &.size-middle { width: 22px; height: 22px; }
+        &.size-large { width: 26px; height: 26px; }
+
+        /* style */
         &::before {
             content: '';
             display: block;
@@ -48,7 +70,7 @@
             transform: rotate(var(--rotate));
         }
 
-        /* pattern */
+        /* style - pattern */
         &.pattern-ginkgo { 
             &::before { background-image: url('../images/ginkgo.png'); }
         }
@@ -64,17 +86,18 @@
         &.pattern-tpn-leaf-3 {
             &::before { background-image: url('../images/tpn-leaf-3.png'); }
         }
-
-        /* size */
-        &.size-smaller { width: 12px; height: 12px; }
-        &.size-small { width: 16px; height: 16px; }
-        &.size-middle { width: 22px; height: 22px; }
-        &.size-large { width: 26px; height: 26px; }
     }
 
-    /* kind - snow */
+    /* item - snow */
     .snow {
 
+        /* size */
+        &.size-smaller { width: 2px; height: 2px; }
+        &.size-small { width: 3px; height: 3px; }
+        &.size-middle { width: 5px; height: 5px; }
+        &.size-large { width: 6px; height: 6px; }
+
+        /* style */
         &::before {
             content: '';
             display: block;
@@ -84,17 +107,18 @@
             background-color: white;
             border-radius: 100px;
         }
-
-        /* size */
-        &.size-smaller { width: 2px; height: 2px; }
-        &.size-small { width: 3px; height: 3px; }
-        &.size-middle { width: 5px; height: 5px; }
-        &.size-large { width: 6px; height: 6px; }
     }
 
-    /* kind - sakura */
+    /* item - sakura */
     .sakura {
 
+        /* size */
+        &.size-smaller { width: 4px; height: 4px; }
+        &.size-small { width: 6px; height: 6px; }
+        &.size-middle { width: 8px; height: 8px; }
+        &.size-large { width: 10px; height: 10px; }
+
+        /* style */
         &::before {
             content: '';
             display: block;
@@ -108,17 +132,13 @@
             /* rotate deg */
             transform: rotate(var(--rotate));
         }
-
-        /* size */
-        &.size-smaller { width: 4px; height: 4px; }
-        &.size-small { width: 6px; height: 6px; }
-        &.size-middle { width: 8px; height: 8px; }
-        &.size-large { width: 10px; height: 10px; }
     }
 }
 
 
-/* animation - falling */
+//------------------------
+// animation - falling
+//------------------------
 .animate-falling {
     position: fixed;
     animation-name: deep-down, path, fade-out;
@@ -133,16 +153,19 @@
     left: calc( var(--left) * 1% );
 }
 
+/* keyframe - deep down */
 @keyframes deep-down {
     0% { top: calc( var(--top) * -1px); }
     100% { top: calc( 100vh + var(--top) * 1px ); }
 }
 
+/* keyframe - path */
 @keyframes path {
     0% { transform: translateX( calc( var(--path) * 1px ) ); }
     100% { transform: translateX( calc( var(--path) * -1px ) ); }
 }
 
+/* keyframe - fade out */
 @keyframes fade-out {
     0% { opacity: 0.9; }
     80% { opacity: 0.9; }

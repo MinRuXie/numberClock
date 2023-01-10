@@ -3,11 +3,11 @@ $(function() {
     let viewport_height = document.body.clientHeight;
     
     let $falling_btn_wrap = $('#js-falling-btn-wrap');
-    let $falling_btn_snow = $falling_btn_wrap.find('.falling-snow');
-    let $falling_btn_ginkgo = $falling_btn_wrap.find('.falling-ginkgo');
-    let $falling_btn_maple = $falling_btn_wrap.find('.falling-maple');
-    let $falling_btn_leafs = $falling_btn_wrap.find('.falling-leafs');
-    let $falling_btn_sakura = $falling_btn_wrap.find('.falling-sakura');
+    let $falling_btn_snow = $falling_btn_wrap.find('.js-falling-snow');
+    let $falling_btn_ginkgo = $falling_btn_wrap.find('.js-falling-ginkgo');
+    let $falling_btn_maple = $falling_btn_wrap.find('.js-falling-maple');
+    let $falling_btn_leafs = $falling_btn_wrap.find('.js-falling-leafs');
+    let $falling_btn_sakura = $falling_btn_wrap.find('.js-falling-sakura');
 
     let $falling_wrap = $('#js-falling-wrap');
     let falling_item_sizes = ['size-smaller', 'size-small', 'size-middle', 'size-large'];
@@ -111,6 +111,13 @@ $(function() {
         $falling_btn_wrap.find('.falling-btn').removeClass('active');
     }
 
+    /* switch theme */
+    function switchTheme(theme) {
+        $falling_wrap.attr('data-theme', ''); // reset
+        $falling_wrap.attr('data-theme', theme); // set
+    }
+
+
 
     /* click - snow */
     $falling_btn_snow.on('click', function() {
@@ -126,8 +133,8 @@ $(function() {
         // build falling item
         buildFalling('snow', snow_count);
 
-        // background image
-        $falling_wrap.removeClass('tpn-theme');
+        // switch theme
+        switchTheme('');
     });
 
     /* click - ginkgo */
@@ -144,8 +151,8 @@ $(function() {
         // build falling item
         buildFalling('ginkgo', leaf_count);
 
-        // background image
-        $falling_wrap.removeClass('tpn-theme');
+        // switch theme
+        switchTheme('');
     });
 
     /* click - maple */
@@ -162,8 +169,8 @@ $(function() {
         // build falling item
         buildFalling('maple', leaf_count);
 
-        // background image
-        $falling_wrap.removeClass('tpn-theme');
+        // switch theme
+        switchTheme('');
     });
 
     /* click - leafs */
@@ -180,8 +187,8 @@ $(function() {
         // build falling item
         buildFalling('leafs', leaf_count);
 
-        // background image
-        $falling_wrap.addClass('tpn-theme');
+        // switch theme
+        switchTheme('leafs');
     });
 
     /* click - sakura */
@@ -198,8 +205,8 @@ $(function() {
         // build falling item
         buildFalling('sakura', snow_count);
 
-        // background image
-        $falling_wrap.removeClass('tpn-theme');
+        // switch theme
+        switchTheme('');
     });
 
 
